@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        function ler(){
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var idade = document.getElementById("idade").value;
+        }
+        function escrever(){
+
+            alert("Nome: "+
+            document.getElementById("nome").value+"\nemail: "+
+            document.getElementById("email").value+
+            "\nidade: "+
+            document.getElementById("idade").value) ;
+
+            console.log(document.getElementById("nome").value+
+            "\n"+
+            document.getElementById("email").value+
+            "\n"+
+            document.getElementById("idade").value);
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Resultado Desafio</h1><br>
+    <form>
+        <br><input id="nome" name="Nome" type="text" value="Digite seu nome">
+        <br>
+        <br><input id="email" type="text" value="Digite seu email">
+        <br>
+        <br><input id="idade" type="text" value="Digite sua idade">
+    </form>
+
+    <br><button onclick="ler()">LER</button>
+    <br>
+    <br><button onclick="escrever()">ESCREVER</button>
+    <br>
+    <br><h2 id="lista"></h2>
+</body>
+</html>

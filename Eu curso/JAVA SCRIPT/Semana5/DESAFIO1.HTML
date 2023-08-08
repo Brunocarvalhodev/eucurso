@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - 1</title>
+</head>
+<script>
+    
+
+    function ler(){
+
+        document.getElementById("nome").value=prompt("digite seu texto aqui");
+          
+    }
+    function escrever(nome){
+
+        alert(document.getElementById("nome").value);
+        console.log(document.getElementById("nome").value);
+    }
+</script>
+<body>
+    <h1>Prmeiro Programa</h1>
+    <br>
+    
+        <input id="nome" type="text" name="nome" value="Nome">
+        <br><br>
+        <button onclick="ler()">Ler</button><br>
+        <br>
+        <button onclick="escrever()">Escrever</button><br>
+    
+</body>
+</html>

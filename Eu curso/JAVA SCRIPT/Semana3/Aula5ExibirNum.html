@@ -1,0 +1,15 @@
+<script>
+    let num1 = 1;
+    let num2 = 1;
+    let condicion = 1;
+
+    while(condicion == true){
+        
+        num1 = prompt("digite um número"); 
+        num1 = parseFloat(num1.replace(",", "."));
+        num2 = prompt("digite um número"); 
+        num2 = parseFloat(num2.replace(",", "."));
+        alert("Os números digitados são "+num1+" e "+num2);
+        condicion = ((num1==0) && (num2==0))?false:true;    
+    }
+</script>

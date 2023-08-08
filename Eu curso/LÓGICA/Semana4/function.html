@@ -1,0 +1,67 @@
+<script>
+
+    
+    let acumulador = 0.0;
+    let i = true;
+    
+    function paraFloat(x) {
+
+        
+        x = prompt("Digite um valor:");
+        x = x.replace(",",".");
+        x = parseFloat(x);
+        
+        return(x);     
+    }
+
+
+    while(i){
+        
+        let n1 = paraFloat( );
+        
+
+        let operac = prompt("Digite a operação '+', '-', '*', '/', '**' ou 'S' para sair");
+       
+
+        switch (operac) {
+            case "+":         
+                alert(acumulador+=n1);
+                console.log("Acumulador: "+acumulador+" "+typeof(acumulador)+"\nN1: "+n1+" "+typeof(n1)+"\nOperador: "+operac+ " "+typeof(operac));
+                break;
+
+            case "-":
+                alert(acumulador-=n1);
+                console.log("Acumulador: "+acumulador+" "+typeof(acumulador)+"\nN1: "+n1+" "+typeof(n1)+"\nOperador: "+operac+" "+typeof(operac));
+                break;
+
+            case "*":
+                alert(acumulador*=n1);
+                console.log("Acumulador: "+acumulador+" "+typeof(acumulador)+"\nN1: "+n1+" "+typeof(n1)+"\nOperador: "+operac+" "+typeof(operac));
+                break;
+
+            case "/":
+                alert(acumulador/=n1);
+                console.log("Acumulador: "+acumulador+" "+typeof(acumulador)+"\nN1: "+n1+" "+typeof(n1)+"\nOperador: "+operac+" "+typeof(operac));
+                break;
+
+            case "**":
+                alert(acumulador**=n1);
+                console.log("Acumulador: "+acumulador+" "+typeof(acumulador)+"\nN1: "+n1+" "+typeof(n1)+"\nOperador: " +operac+" "+typeof(operac));
+                break;
+
+            case "s":
+                i = false;
+                console.log(acumulador);
+                alert("O ultimo valor é " + acumulador);
+                break;
+            
+            case "S":
+                i = false;
+                console.log(acumulador);
+                alert("O ultimo valor é " + acumulador);
+                break;
+        }      
+        
+
+    }
+</script>

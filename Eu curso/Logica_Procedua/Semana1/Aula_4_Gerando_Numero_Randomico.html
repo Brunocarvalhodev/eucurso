@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4 - Gerando Número Randômico Conforme Parâmetro</title>
+
+    <script>
+        let maxNumber = parseInt(prompt("Teste a sorte!\nDigite um número de 0 a 1000!\nPara o valor maxímo!"));
+        let variableNumber = parseInt(Math.random()*maxNumber);
+        let userValue;
+          
+        while((isNaN(maxNumber)) || (maxNumber > 1000) || (maxNumber < 0)){
+            let temporaryVariable = parseInt(prompt("Digite um número de 0 a 1000!\nPara o valor maxímo!"));
+            maxNumber = temporaryVariable;
+        }
+
+        while(userValue != variableNumber){
+            let userValue = parseInt(prompt("Digite um valor de 0 a "+maxNumber+": "));
+            
+            if(userValue != variableNumber){
+                alert("Erroooooooooooooooooooooooooooou!!!!!!!");
+                
+                if(userValue > variableNumber){
+                    alert("O número que você digitou é maior!");
+                }else{
+                    alert("O número que você digitou é menor");
+                }
+
+            }else{
+                alert("Acerto Miseraviiiiiiii!!!");
+                alert("O número correto é: "+userValue);
+                break;
+            }
+        }
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

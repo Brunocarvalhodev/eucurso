@@ -1,0 +1,49 @@
+<script>
+    let num1 = 0;
+    let num2 = 0;
+    let num3 = 0;
+    let operac = " ";
+
+    while(operac != 's' || 'S'){
+
+        num1 = prompt('Digite o primeiro valor');
+        operac = prompt("Escolha a operação ('+','-','*','/','**') ou digite 's' para sair");
+        num3 = 0;
+        num2 = prompt('Digite o segundo valor');
+    
+        
+    
+
+
+        num1 = parseFloat(num1.replace(',','.'));
+        num2 = parseFloat(num2.replace(',','.'));
+        
+        
+        if(operac == "+"){
+            num3 = (num1 + num2);
+            alert (num3);
+            console.log(num1 + num2);
+        }else if(operac == "-"){
+            num3 = (num1 - num2);
+            alert (num3);
+            console.log(num1 - num2);
+        }else if(operac == "*"){
+            num3 = (num1 * num2);
+            alert (num3);
+            console.log(num1 * num2);
+        }else if(operac == "/"){
+            num3 = (num1 / num2);
+            alert (num3);
+            console.log(num1 / num2);
+        }else if(operac == "**"){
+            num3 = (num1 ** num2);
+            alert (num3);
+            console.log(num1 ** num2);
+        }else if (operac != 's'||'S'){
+            alert("Fim do programa !!!");
+            break;
+        }
+    }
+        
+
+</script>

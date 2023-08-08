@@ -1,0 +1,45 @@
+body{
+    background-color: black;            
+}
+
+.card{
+    
+    background-color: #ffd000;
+    padding: 30px;
+    border-radius: 5px;
+
+}
+
+.card-top{
+    text-align: center;
+}
+
+.card-group{
+    text-align: center;
+}
+
+.img1{
+    border-radius: 50%;
+    width: 100px;   
+}
+
+.form{    
+    margin: auto;
+    margin-top: 10%;
+    width: 400px;
+    
+}
+
+#campoEmail-Senha{
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: larger;
+    
+}
+
+#enviar{
+    border-style: groove black;
+
+    
+}

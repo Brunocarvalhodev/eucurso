@@ -1,0 +1,48 @@
+<script>       
+    
+    let num = 1;
+    let num1 = 0;
+    let num2 = 0;
+    let num3 = 0;
+    let operat = " ";
+    
+
+    while(num != 0){
+
+        num = prompt("Digite o numero ou 0 para sair");
+        if(num == 0){
+            alert("Fim do programa !!!");
+            break;
+        }else;
+        operac = prompt("Digite a operação, '+', '-', '*','/' ou '**'");
+        num2 = prompt("Digite o numero");
+
+        num1 = num;
+
+        num1 = parseFloat(num1.replace(",","."));
+        num2 = parseFloat(num2.replace(",","."));
+        
+        if(operac == "+"){
+            num3 = (num1 + num2);
+            alert (num3);
+            console.log(num1 + num2);
+        }else if(operac == "-"){
+            num3 = (num1 - num2);
+            alert (num3);
+            console.log(num1 - num2);
+        }else if(operac == "*"){
+            num3 = (num1 * num2);
+            alert (num3);
+            console.log(num1 * num2);
+        }else if(operac == "/"){
+            num3 = (num1 / num2);
+            alert (num3);
+            console.log(num1 / num2);
+        }else if(operac == "**"){
+            num3 = (num1 ** num2);
+            alert (num3);
+            console.log(num1 ** num2);
+        }
+
+    }
+</script>

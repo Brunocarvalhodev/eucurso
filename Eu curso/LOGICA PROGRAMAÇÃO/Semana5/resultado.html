@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="\Users\User\Documents\Eu curso\EU CURSO\Semana5\stylecss\style.css">
+
+    
+    <script>
+        function ler(){
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var idade = document.getElementById("idade").value;
+        }
+        function escrever(){
+
+            alert("Nome: "+
+            document.getElementById("nome").value+"\nemail: "+
+            document.getElementById("email").value+
+            "\nidade: "+
+            document.getElementById("idade").value) ;
+
+            console.log(document.getElementById("nome").value+
+            "\n"+
+            document.getElementById("email").value+
+            "\n"+
+            document.getElementById("idade").value);
+        }
+    </script>
+
+</head>
+<body>
+    <div id="painel">
+        <h1>Resultado Desafio</h1><br>
+        <form>
+            <br><input id="nome" name="Nome" type="text" placeholder="Nome">
+            <br>
+            <br><input id="email" type="text" placeholder="E-mail">
+            <br>
+            <br><input id="idade" type="text" placeholder="Idade">
+        </form>
+
+        <ul id="buton">
+            
+            <li ><button onclick="ler()">LER</button></li>
+            <li><button onclick="escrever()">ESCREVER</button></li>
+            
+        </ul>
+        
+        
+    </div>
+</body>
+</html>

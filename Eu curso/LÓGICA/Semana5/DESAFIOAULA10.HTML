@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Aula 10 - Crando Cadastro</title>
+
+    
+    <script>
+        let contador = 0;
+        let name = [];
+        let emails = [];
+        let enderecos = [];
+        let whatss = [];
+
+        function criarCadastro(){
+            
+            let nome = document.getElementById('nome').value;                
+                document.getElementById("usuarios").innerHTML += "<p onclick='exibir("+ contador + ")'>" + nome;
+                    name[contador] = nome;
+
+            let email = document.getElementById('email').value;
+                
+                    emails[contador] = email;
+            
+            let endereco = document.getElementById('endereco').value;
+                
+                    enderecos[contador] = endereco;
+            
+            let whats = document.getElementById('whats').value;
+                
+                    whatss[contador] = whats;
+                
+                contador++;
+            
+            alert("Cadastro criado com sucesso!");
+
+        }
+        function exibir(indice){
+            document.getElementById('cadastro').innerHTML = '<br><b>Nome: </b>' + name[indice] + '<br><b>E-mail: </b>' + emails[indice] + '<br><b>Endereço: </b>' + enderecos[indice] + '<br><b>Whatsapp: </b>' + whatss[indice];
+            
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Página de Cadastros</h1>
+    <br>
+    Nome:  <input id="nome">
+    <br><br>
+    E-mail: <input id="email">
+    <br><br>
+    Endereço: <input id="endereco">
+    <br><br>
+    Whatsapp: <input id="whats">
+    <br><br>
+    <button onclick="criarCadastro()"><b>Criar cadastro</b></button>
+    
+    <br>
+    <br><b>Usuário</b>
+    <br><p id="usuarios"></p>
+    
+    <br><b>Cadastro</b>
+    <br><p id="cadastro"></p>
+</body>
+</html>

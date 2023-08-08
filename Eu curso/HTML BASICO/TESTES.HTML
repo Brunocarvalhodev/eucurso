@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <script>
+        function ler(){
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var tamanho = document.getElementById("tamanho").value;
+            var telefone = document.getElementById("telefone").value;
+            var coment = document.getElementById("coment");
+            
+
+        }        
+        function escrever(){  
+            
+            alert(
+            "Nome: "+document.getElementById("nome").value+
+            "\nEmail: "+document.getElementById("email").value+
+            "\nTelefone: "+document.getElementById("telefone").value+
+            "\nTamanho: "+document.getElementById("tamanho").value+
+            "\nComent: "+document.getElementById("coment")) ;
+
+            console.log(document.getElementById("nome").value+
+            "\n"+
+            document.getElementById("email").value+
+            "\n"+
+            document.getElementById("telefone").value+
+            "\n"+
+            document.getElementById("tamanho").value+
+            "\n"+
+            document.getElementById("coment"));
+        }
+    </script>
+    
+
+</head>
+<body>
+    <h1>Formulário</h1>
+
+    <form>
+        <legend>Dados Pessoais</legend>    
+        <p><label>Nome do Cliente: <input id="nome" type="text" name="Nome" required placeholder="Nome"></label></p>
+        <p><label>Telefone do Cliente: <input id="telefone" type="tel" name="Telefone" required placeholder="Telefone"></label></p>
+        <p><label>Email do Cliente: <input id="email" type="email" name="Email" required placeholder="E-mail"></label></p>
+        <br>
+        <fieldset>
+            <legend>Tamanho</legend>
+            <p><label><input id="tamanho" type="radio" name="tamanho" value="pequena">Pequena</label></p>
+            <p><label><input id="tamanho" type="radio" name="tamanho" value="médio">Médio</label></p>
+            <p><label><input id="tamanho" type="radio" name="tamanho" value="grande">Grande</label></p>
+        </fieldset>    
+        <fieldset>
+            <legend>Sugestões</legend>
+            <p><label>Sugestões: <textarea id="coment" name="conmentario" maxlength="1000" value=""></textarea></label></p>
+        </fieldset>
+    </form>
+        <p><button id="ler" onclick="ler()">GERAR PEDIDO</button></p>
+        <p><button id="escrever" onclick="escrever()">ENVIAR PEDIDO</button></p>
+            
+        
+</body>
+</html>

@@ -1,0 +1,47 @@
+<script>
+    let num1 =prompt('Digite o primeiro número');
+    num1 = parseFloat(num1.replace(",", "."));
+    let num2 = 0;
+    let operac = " ";
+
+    while(operac != "s"||"S"){
+        
+        operac = prompt('Digite a operação ("+","-","*","/", "**" ou "s" para sair');
+                
+        if(operac == "+"){
+            num2 = prompt('Digite o proximo número');
+            num2 = parseFloat(num2.replace(",", "."));
+            num1 += num2;
+            alert (num1);
+            console.log(num1);
+        }else if(operac == "-"){
+            num2 = prompt('Digite o proximo número');
+            num2 = parseFloat(num2.replace(",", "."));
+            num1 -= num2;
+            alert (num1);
+            console.log(num1);
+        }else if(operac == "*"){
+            num2 = prompt('Digite o proximo número');
+            num2 = parseFloat(num2.replace(",", "."));
+            num1 *= num2;
+            alert (num1);
+            console.log(num1);
+        }else if(operac == "/"){
+            num2 = prompt('Digite o proximo número');
+            num2 = parseFloat(num2.replace(",", "."));
+            num1 /= num2;
+            alert (num1);
+            console.log(num1);
+        }else if(operac == "**"){
+            num2 = prompt('Digite o proximo número');
+            num2 = parseFloat(num2.replace(",", "."));
+            num1 **= num2;
+            alert (num1);
+            console.log(num1);
+        }else if(operac == "s"||"S"){
+            alert("fim do programa");
+            break;
+        }
+    }
+
+</script>

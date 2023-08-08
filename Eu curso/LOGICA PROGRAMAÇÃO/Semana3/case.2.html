@@ -1,0 +1,38 @@
+<script>
+    let num2;
+    let acumulador = 0;
+    let operac;
+    while(operac != (("s")||("S"))){
+
+        
+        num2 = prompt("Digite um número");
+        num2 = parseFloat(num2.replace(",","."));
+        operac = prompt("Digite a operação ('+', '-', '*', '/', '**') ou 's para sair");
+        
+        switch(operac){
+            case "+":
+                (acumulador += num2);
+                break;
+            case "-":
+                (acumulador -= num2);
+                break;
+            case "*":
+                (acumulador *= num2);
+                break;
+            case "/":
+                (acumulador /= num2);
+                break;
+            case "**":
+                (acumulador **= num2);
+                break;
+            case ("s")||("S"):
+                alert("Fim do programa");
+                break;       
+            default:
+        }
+        alert("O acumulador é "+acumulador);
+    
+            
+
+    }
+</script>

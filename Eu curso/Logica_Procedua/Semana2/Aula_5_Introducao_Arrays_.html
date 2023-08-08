@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3.1 - Intridução a Arrays</title>
+
+    <script>
+       
+        let fristArray = [];
+        let counter = 0;
+        let userHits = 0;
+        let userNumber;
+        let attempts = parseInt(prompt("Quantas Números você quer adivinhar? "));
+        let maxNumber = parseInt(prompt("Digite o número maximo para você adivinhar.\nAdivinhe um valor de 0 até..: "));
+        let test = false;
+
+        while((isNaN(attempts) || (attempts < 0)) || (isNaN(maxNumber) || (maxNumber < 0))){
+            attempts = parseInt(prompt("Quantas Números você quer adivinhar? "));
+            maxNumber = parseInt(prompt("Digite o número maximo para você adivinhar.\nAdivinhe um valor de 0 até..: "));
+        }
+
+        for (let index = 0; index < attempts; index++) {
+            fristArray[index] = parseInt(Math.random()*maxNumber)+1;  
+        }
+        while(counter < attempts){
+            
+            userNumber = parseInt(prompt("Digite um número: "));
+            userHits++;
+
+            let hit = false;
+            
+            for(let i = 0; i < attempts; i++){
+
+                if(userNumber == fristArray[i]){
+                    if(hit == false){
+                        counter++;
+                        alert("Parabens você acertou "+counter+" de "+attempts+" !!!!");
+                        fristArray[i] = -1; 
+                        hit = true;               
+                    }
+                }
+            }
+            if(hit == false){
+                alert("Voc^r errou!!!");
+            }
+              
+        }
+
+        console.log(fristArray.length);
+        alert("Parabéns você acetrou todos os números em "+userHits+" tentativas!");
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

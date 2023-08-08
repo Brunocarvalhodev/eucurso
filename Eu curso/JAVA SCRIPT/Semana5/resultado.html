@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado testet</title>
+    
+    <script>
+        function ler(){
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var idade = document.getElementById("idade").value;
+            var telefone = document.getElementById("telefone").value;
+            var senha = document.getElementById("senha").value;
+        }
+        function escrever(){
+
+            alert(
+            "Nome: "+document.getElementById("nome").value+
+            "\nemail: "+document.getElementById("email").value+
+            "\ntelefone: "+document.getElementById("telefone").value+
+            "\nidade: "+document.getElementById("idade").value+
+            "\nsenha: "+document.getElementById("senha").value) ;
+
+            console.log(document.getElementById("nome").value+
+            "\n"+
+            document.getElementById("email").value+
+            "\n"+
+            document.getElementById("telefone").value+
+            "\n"+
+            document.getElementById("idade").value+
+            "\n"+
+            document.getElementById("senha").value);
+        }
+    </script>
+    <!--<link rel="stylesheet" type="text/css" href="C:\Users\PDV\Documents\EU CURSO\EU CURSO\CSS\AULA4CSS.CSS"> 
+    -->
+    </head>
+<body>
+    <div id="form2">
+        <h1>Resultado Desafio<br></h1>
+        
+        <form >
+            <fieldset>
+                <legend>Formulário</legend>
+                <p><Label><input id="nome" required name="Nome" placeholder="NOME" ></Label></p>
+            
+                <p><label><input id="email" required type="email" placeholder="E-MAIL" ></label></p>
+                
+                <p><label><input id="idade" required type="text" placeholder="IDADE" ></label></p>
+
+                <p><label><input id="senha" required type="password" placeholder="PASSWORD" ></label></p>
+
+                <p><label><input id="telefone" required type=tel placeholder="TELEFONE" ></label></p>
+            </fieldset>   
+        </form>
+
+        <div id="buton">
+            <br>
+            <button id="ler" onclick="ler()">LER</button>
+            
+            <button id="escrever" onclick="escrever()">ESCREVER</button>
+           
+        </div>
+    </div>
+</body>
+</html>

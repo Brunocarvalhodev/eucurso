@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7 - Acertar Três Números</title>
+    <script>
+
+        let maxNumber = parseInt(prompt("Digite o valor máximo de 0 a 1000: "));
+        
+
+        while(isNaN(maxNumber) || (maxNumber < 0) || (maxNumber > 1000)){
+            let temporaryNumber = parseInt(prompt("Digite o valor máximo de 0 a 1000: "));
+            maxNumber = temporaryNumber;
+        }   
+
+        let randomNumber = parseInt((Math.random()*maxNumber)+1);
+        let acounter = 0; 
+
+        while(acounter < 3){
+        
+            
+            let userResponse = parseInt(prompt("Digite um número: "));
+            
+            if(randomNumber != userResponse){
+                alert("Erroooooooouuuuu!!!! tente novamente!");
+                if(userResponse < randomNumber){
+                    alert("Onumero que você digitou é menor!")
+                }else{
+                    alert("Onúmero que você digitou é maior!")
+                }
+            }
+            else{
+                alert("Parabéns você acertou!!! O número correto é: "+randomNumber);
+                let temporaryNumber = parseInt((Math.random()*maxNumber)+1);
+                randomNumber = temporaryNumber;
+                acounter++;
+                alert("Você acertou " + acounter + " de 3 números!");
+                
+            }
+            
+        }   
+        
+        alert("parabééééééééééééééns!!!!! \nAcertoooooouuuu Miseraaaaviiiiii!!!!!!!");
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

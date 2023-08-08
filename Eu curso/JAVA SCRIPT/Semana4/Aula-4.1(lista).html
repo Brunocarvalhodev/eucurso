@@ -1,0 +1,27 @@
+<script>
+
+    let a = [];
+    let b = [];
+    let i = 0;
+    let i2 = 0;
+    let k = 0;
+    let j = parseInt(prompt("Digite o total de valores: "));
+    let par = parseInt(prompt("para numeros par digite '0' para impar digite '1': "));
+    while(i < j){
+
+        while(k<j){
+            if(k%2 == par){
+                b[i2] = k;
+                i2++;              
+            }
+            k++;                        
+        }
+        if(k>=j){
+            i2 = 0;                
+        }
+        a[i] = b;
+        i++;
+           
+    }
+    console.log(a);
+</script>

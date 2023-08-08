@@ -1,0 +1,54 @@
+<script>
+/*
+    Primeiro programa
+        Calculo IMC
+
+    indice menor que 18,5  - magreza  - obsidade - 0
+    entre 18,5 e 24,9 - normal - obesidade - 0
+    entre 25 e 29,9 - sobrepeso - obesidade - I
+    entre 30 e 39,9 - obesidade - obesidade - II
+    maior que 40 - obesidade grave - obesidade - III
+*/
+    
+    let peso = prompt('Digite seu peso');
+    let altura = prompt('Digite sua altura');
+    //função "parse" converte para número, colocar 'Float' ou 'Int'
+    //'.replace(',','.')' para trocar virgula or ponto na função para calcular
+    altura = parseFloat(altura.replace(',','.'));
+    peso = parseFloat(peso.replace(',','.'));
+    
+    imc = (peso / (altura ** 2));
+
+    if(imc < 18.5){
+        alert('Sua classificação é de MAGREZA, nivel de obesidade 0');
+        console.log('Sua classificação é de MAGREZA, nivel de obesidade 0 - seu IMC é',imc);
+    }else if(imc < 25 ){
+        alert('Sua classificação é de NORMAL, nivel de obesidade 0');
+        console.log('Sua classificação é de NORMAL, nivel de obesidade 0- seu IMC é',imc);
+    }
+    else if(imc < 30){
+        alert('Sua classificação é de SOBREPESO, nivel de obesidade I');
+        console.log('Sua classificação é de SOBREPESO, nivel de obesidade I- seu IMC é',imc);   
+    }
+    else if(imc < 40){
+        alert('Sua classificação é de OBESIDADE, nivel de obesidade II');
+        console.log('Sua classificação é de OBESIDADE, nivel de obesidade II- seu IMC é',imc);
+    }
+    else if(imc > 40 ){
+        alert('Sua classificação é de OBESIDADE GRAVE, nivel de obesidade III');
+        alert('Procure um médico !!!');
+        console.log('Sua classificação é de OBESIDADE GRAVE, nivel de obesidade III- seu IMC é',imc);
+    }
+    else{
+        alert('ERRO, VALOR DIGITADO INVALIDO');
+    }
+    alert('seu IMC é '+ imc);
+    alert('seu peso é '+ peso);
+    alert('sua altura é '+ altura);    
+    
+    console.log('Seu peso é' + peso);
+    console.log(typeof(peso));
+    console.log('Sua altura é' + altura); 
+    console.log(typeof(altura));   
+
+</script>

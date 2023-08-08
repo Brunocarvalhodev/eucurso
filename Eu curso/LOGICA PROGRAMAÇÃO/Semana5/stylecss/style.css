@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(110, 110, 110);
+    align-items: center;
+    width: 400px;
+    
+}
+#painel{
+    background-color: rgb(160,160,160);
+    border-color: aliceblue;
+    border-style: double;
+    max-width: 60%;
+    min-width:40%;
+    padding: 10%;
+    text-align: center;
+}
+ul{
+    
+    border-radius: 10px;
+    align-items: center;
+   
+}
+li { 
+    list-style-type: none; 
+    display:inline-block;
+        
+}
+form{
+  
+    text-decoration-color: black;
+    font-size: medium;
+
+    
+}
