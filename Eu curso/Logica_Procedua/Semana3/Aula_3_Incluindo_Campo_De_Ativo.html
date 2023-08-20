@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3 - Incluindo Campo de Atribuição</title>
+
+    <script>
+
+//variaveis
+        let fristArray = [];
+        let counter = 0, userHits = 0;
+        let userNumberX; 
+        let userNumberY;
+        let attempts = parseInt(prompt("Quantas Números você quer adivinhar? "));
+        let maxNumber = parseInt(prompt("Digite o número maximo para você adivinhar.\nAdivinhe um valor de 0 até..: "));
+        
+//Verificação: 1 - ser número, 2 - ser maior que zero 
+        while((isNaN(attempts) || (attempts < 0)) || (isNaN(maxNumber) || (maxNumber < 0))){
+            attempts = parseInt(prompt("Quantas Números você quer adivinhar? "));
+            maxNumber = parseInt(prompt("Digite o número maximo para você adivinhar.\nAdivinhe um valor de 0 até..: "));
+            if((attempts == -1) && (maxNumber == -1)){
+                break;
+            }
+        }
+
+//Gerando campo de úmeros e ativo
+        for (let index = 0; index < attempts; index++) {
+            
+            let xValue = parseInt(Math.random()*maxNumber)+1;
+            let yValue = parseInt(Math.random()*maxNumber)+1;
+            let arrayTemp = {x : xValue, y : yValue, active : true};
+            fristArray[index] = arrayTemp;
+            //console.log(arrayTemp);
+        }
+        
+//Lógica do Game
+        while(counter < attempts){
+            
+            userNumberX = parseInt(prompt("Digite número de X: "));
+            userNumberY = parseInt(prompt("Digite número de Y: "));
+            userHits++;
+            let hit = false;
+            for(let i = 0; i < attempts; i++){
+
+                if((userNumberX == fristArray[i].x) && (userNumberY == fristArray[i].y) && (fristArray[i].active)){
+                        counter++;
+                        alert("Parabens você acertou "+counter+" de "+attempts+" !!!!");
+                        fristArray[i].active = false; 
+                        console.log(fristArray[i]);
+                        hit = true;
+                        break;               
+                }
+            }if(!hit){
+                alert("Você errou!!!");
+            }
+            
+        }
+        alert("Parabéns você acetrou todos os números em "+userHits+" tentativas!");
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
