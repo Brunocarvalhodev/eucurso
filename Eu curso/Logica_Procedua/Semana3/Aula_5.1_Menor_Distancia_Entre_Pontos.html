@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 5 Menor Distancia Entre Pontos</title>
+    <title>Aula 5.1 Menor Distancia Entre Pontos</title>
 
     <script>
 
@@ -20,7 +20,7 @@
 
             let zUser = x1 - x2;
             let zMachine = y1 - y2;
-            let z = Math.sqrt(Math.pow(zUser, 2) + Math.pow(zMachine, 2));
+            let z =  Math.sqrt(Math.pow(zUser, 2) + Math.pow(zMachine, 2));
             return z;  
         }
         
@@ -63,17 +63,17 @@
             }
             if(!hit){
                 alert("Você errou!!!");
-                let distanceLess;
+                let distanceLess = Number.MAX_VALUE;
                 for(let i = 0; i < attempts; i++){
                     if(fristArray[i].active){
                         let distanceTemp = distance((userNumberX), (fristArray[i].x), (userNumberY), (fristArray[i].y));
 // // // /// /// Calculo da menor distancia entre os pontos
-                        if ((distanceLess > distanceTemp) || (distanceLess == undefined)){
+                        if ((distanceLess > distanceTemp) && (fristArray[i].active)){
                             distanceLess = distanceTemp;
                         }
                     }
                 }
-                alert("A distância pmais próxima para o proximo ponto é de " + distanceLess);
+                alert("O ponto mais proximo está " + distanceLess + " de distância");
             }     
         }
         alert("Parabéns você acetrou todos os números em "+userHits+" tentativas!");       

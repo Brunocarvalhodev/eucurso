@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 5 Menor Distancia Entre Pontos</title>
+    <title>Aula 6 Trabalhando Com Strings</title>
 
     <script>
 
 //variaveis
         let fristArray = [];
         let counter = 0, userHits = 0;
+        let userNumber; 
+        // Variaveis trocadas pelo novo codigo por variavel.split()
         let userNumberX; 
-        let userNumberY;
+        let userNumberY;   
         let attempts = parseInt(prompt("Quantas Números você quer adivinhar? "));
         let maxNumber = parseInt(prompt("Digite o número maximo para você adivinhar.\nAdivinhe um valor de 0 até..: "));
 
@@ -20,7 +22,7 @@
 
             let zUser = x1 - x2;
             let zMachine = y1 - y2;
-            let z = Math.sqrt(Math.pow(zUser, 2) + Math.pow(zMachine, 2));
+            let z =  Math.sqrt(Math.pow(zUser, 2) + Math.pow(zMachine, 2));
             return z;  
         }
         
@@ -45,16 +47,23 @@
         
 //Lógica do Game
         while(counter < attempts){
-            
-            userNumberX = parseInt(prompt("Digite número de X: "));
-            userNumberY = parseInt(prompt("Digite número de Y: "));
+
+            /*  Variaveis trocadas
+                userNumberX = prompt("Digite número de X: ");
+                userNumberY = prompt("Digite número de y: ");
+            */
+            userNumber = prompt("Digite número de X e y: ");
+            let arrayUserNumber = userNumber.split(",");
+
+            userNumberX = arrayUserNumber[0];
+            userNumberY = arrayUserNumber[1];
             userHits++;
             let hit = false;
             for(let i = 0; i < attempts; i++){
 
                 if((userNumberX == fristArray[i].x) && (userNumberY == fristArray[i].y) && (fristArray[i].active)){
                         counter++;
-                        alert("Parabens você acertou "+counter+" de "+attempts+" !!!!");
+                        alert(`Parabens você acertou ${counter} de ${attempts} !!!!`);
                         fristArray[i].active = false; 
                         console.log(fristArray[i]);
                         hit = true;
@@ -63,20 +72,20 @@
             }
             if(!hit){
                 alert("Você errou!!!");
-                let distanceLess;
+                let distanceLess = Number.MAX_VALUE;
                 for(let i = 0; i < attempts; i++){
                     if(fristArray[i].active){
                         let distanceTemp = distance((userNumberX), (fristArray[i].x), (userNumberY), (fristArray[i].y));
 // // // /// /// Calculo da menor distancia entre os pontos
-                        if ((distanceLess > distanceTemp) || (distanceLess == undefined)){
+                        if ((distanceLess > distanceTemp) && (fristArray[i].active)){
                             distanceLess = distanceTemp;
                         }
                     }
                 }
-                alert("A distância pmais próxima para o proximo ponto é de " + distanceLess);
+                alert(`O ponto mais proximo está ${distanceLess} de distância`);
             }     
         }
-        alert("Parabéns você acetrou todos os números em "+userHits+" tentativas!");       
+        alert(`Parabéns você acetrou todos os números em ${userHits} tentativas!`);       
     </script>
 
 </head>
